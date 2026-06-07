@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terms of Service — Color Cascade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --blue-deep:   #0d1f5c;
+      --blue-mid:    #1040a8;
+      --blue-light:  #1E90FF;
+      --gold:        #FFA502;
+      --white:       #ffffff;
+      --text:        rgba(255,255,255,0.85);
+      --text-muted:  rgba(255,255,255,0.45);
+      --card-bg:     rgba(255,255,255,0.05);
+      --card-border: rgba(255,255,255,0.10);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(175deg, var(--blue-deep) 0%, var(--blue-mid) 50%, #0a2a80 100%);
+      min-height: 100vh;
+      color: var(--text);
+      padding-bottom: 60px;
+    }
+
+    header {
+      padding: 40px 24px 32px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: relative; overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% -20%, rgba(255,165,2,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .logo-tiles {
+      display: flex; justify-content: center; gap: 8px; margin-bottom: 16px;
+    }
+    .logo-tile {
+      width: 28px; height: 28px; border-radius: 8px;
+      box-shadow: 0 3px 0 rgba(0,0,0,0.3), inset 0 2px 0 rgba(255,255,255,0.3);
+      position: relative; overflow: hidden;
+    }
+    .logo-tile::after {
+      content: '';
+      position: absolute; top: 3px; left: 4px;
+      width: 8px; height: 5px; border-radius: 50%;
+      background: rgba(255,255,255,0.55);
+    }
+    h1 {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(28px, 6vw, 42px);
+      letter-spacing: 1px; color: var(--white);
+      text-shadow: 0 3px 0 rgba(0,0,0,0.3);
+      margin-bottom: 6px;
+    }
+    .subtitle { color: var(--gold); font-size: 13px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; }
+    .updated  { color: var(--text-muted); font-size: 12px; font-weight: 700; }
+
+    main { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+    .section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px; padding: 24px 26px; margin-top: 20px;
+      animation: fadeUp 0.4s ease both;
+    }
+    .section:nth-child(n) { animation-delay: calc(0.05s * var(--i, 1)); }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .section-icon {
+      width: 38px; height: 38px; border-radius: 11px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    }
+    h2 { font-family: 'Fredoka One', cursive; font-size: 20px; color: var(--white); letter-spacing: 0.5px; }
+    p  { color: var(--text); font-size: 14px; font-weight: 600; line-height: 1.75; margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+    ul { padding-left: 0; list-style: none; margin-bottom: 12px; }
+    ul li {
+      color: var(--text); font-size: 14px; font-weight: 600;
+      line-height: 1.75; padding-left: 22px; position: relative; margin-bottom: 4px;
+    }
+    ul li::before { content: '▸'; position: absolute; left: 0; color: var(--gold); font-size: 12px; }
+    a { color: var(--blue-light); font-weight: 700; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .highlight-box {
+      background: rgba(255,165,2,0.08);
+      border: 1px solid rgba(255,165,2,0.25);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 12px;
+    }
+    .highlight-box p { margin: 0; }
+
+    .warning-box {
+      background: rgba(255,71,87,0.08);
+      border: 1px solid rgba(255,71,87,0.25);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 12px;
+    }
+    .warning-box p { margin: 0; }
+
+    .contact-card {
+      background: linear-gradient(135deg, rgba(255,165,2,0.12), rgba(255,71,87,0.08));
+      border: 2px solid rgba(255,165,2,0.3);
+      border-radius: 16px; padding: 20px 22px; margin-top: 20px; text-align: center;
+    }
+    .contact-card h3 { font-family: 'Fredoka One', cursive; font-size: 18px; color: var(--gold); margin-bottom: 6px; }
+    .contact-card p  { margin: 0; }
+    .email-btn {
+      display: inline-block; margin-top: 12px;
+      background: linear-gradient(135deg, #FFA502, #FF7700);
+      border-radius: 12px; padding: 10px 22px;
+      color: #fff; font-family: 'Fredoka One', cursive;
+      font-size: 15px; text-decoration: none;
+      box-shadow: 0 4px 0 #7A3500;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-tiles">
+    <div class="logo-tile" style="background:#FF4757;"></div>
+    <div class="logo-tile" style="background:#FFA502;"></div>
+    <div class="logo-tile" style="background:#2ED573;"></div>
+    <div class="logo-tile" style="background:#1E90FF;"></div>
+    <div class="logo-tile" style="background:#A55EEA;"></div>
+    <div class="logo-tile" style="background:#FF6B81;"></div>
+  </div>
+  <h1>Terms of Service</h1>
+  <div class="subtitle">Color Cascade</div>
+  <div class="updated">Last updated: June 2026 &nbsp;·&nbsp; Effective immediately</div>
+</header>
+
+<main>
+
+  <!-- Intro -->
+  <div class="section">
+    <div class="highlight-box">
+      <p>Please read these Terms of Service carefully before playing <strong>Color Cascade</strong>. By downloading or using the App, you agree to be bound by these terms. If you do not agree, please do not use the App.</p>
+    </div>
+    <p>These Terms constitute a legal agreement between you ("User") and the developer of Color Cascade ("Developer", "we", "us").</p>
+  </div>
+
+  <!-- Acceptance -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:linear-gradient(135deg,#1E90FF,#0050CC);">✅</div>
+      <h2>Acceptance of Terms</h2>
+    </div>
+    <p>By accessing or using Color Cascade, you confirm that you are:</p>
+    <ul>
+      <li>At least 4 years of age (or have parental/guardian consent)</li>
+      <li>Legally able to enter into a binding agreement in your jurisdiction</li>
+      <li>Agreeing to comply with these Terms and all applicable laws</li>
+    </ul>
+    <p>These Terms may be updated at any time. Continued use of the App after updates constitutes acceptance of the revised Terms.</p>
+  </div>
+
+  <!-- License -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:linear-gradient(135deg,#2ED573,#0D7A35);">📱</div>
+      <h2>License to Use the App</h2>
+    </div>
+    <p>We grant you a limited, non-exclusive, non-transferable, revocable licence to download and use Color Cascade for your personal, non-commercial entertainment purposes only.</p>
+    <p>You may <strong>not</strong>:</p>
+    <ul>
+      <li>Copy, modify, or distribute the App or its content</li>
+      <li>Reverse engineer, decompile, or disassemble the App</li>
+      <li>Use the App to develop competing products</li>
+      <li>Sell, rent, or sublicense access to the App</li>
+      <li>Remove any copyright, trademark, or proprietary notices</li>
+    </ul>
+  </div>
+
+  <!-- Virtual Currency -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:linear-gradient(135deg,#FFE566,#FFA502);">🪙</div>
+      <h2>Virtual Currency &amp; In-App Items</h2>
+    </div>
+    <p>Color Cascade includes a virtual coin system. Coins are earned through gameplay and daily login bonuses and can be spent on in-game power-ups.</p>
+    <div class="warning-box">
+      <p><strong>Important:</strong> Virtual coins and power-ups have no real-world monetary value. They cannot be transferred, sold, or exchanged for real currency or other items of value outside the App.</p>
+    </div>
+    <ul>
+      <li>Coins are stored locally on your device and are not backed up to a server</li>
+      <li>We reserve the right to modify, suspend, or discontinue virtual currency systems at any time</li>
+      <li>Coins may be lost if you uninstall the App or clear App data</li>
+    </ul>
+  </div>
+
+  <!-- Advertising -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:linear-gradient(135deg,#FFA502,#FF6B00);">📣</div>
+      <h2>Advertising</h2>
+    </div>
+    <p>Color Cascade is free to play and is supported by advertisements served by Google AdMob. By using the App, you acknowledge that:</p>
+    <ul>
+      <li>Advertisements may be displayed during gameplay</li>
+      <li>Rewarded ads may be offered in exchange for in-game benefits (optional)</li>
+      <li>Ad content is served by Google and is subject to Google's policies</li>
+      <li>Personalised ads require your consent via the App Tracking Transparency prompt</li>
+    </ul>
+  </div>
+
+  <!-- User Conduct -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:linear-gradient(135deg,#FF4757,#AA0011);">🚫</div>
+      <h2>User Conduct</h2>
+    </div>
+    <p>You agree not to use the App in any way that:</p>
+    <ul>
+      <li>Violates any applicable local, national, or international law or regulation</li>
+      <li>Exploits bugs, cheats, or unintended game mechanics for unfair advantage</li>
+      <li>Attempts to manipulate scores, leaderboards, or daily reward systems</li>
+      <li>Interferes with the normal operation of the App</li>
+      <li>Harasses, abuses, or harms other users</li>
+    </ul>
+    <p>We reserve the right to terminate access to the App for violations of this conduct policy.</p>
+  </div>
+
+  <!-- Intellectual Property -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:linear-gradient(135deg,#A55EEA,#6600BB);">©️</div>
+      <h2>Intellectual Property</h2>
+    </div>
+    <p>All content in Color Cascade — including but not limited to graphics, game mechanics, music, sound effects, logos, and code — is the exclusive property of the Developer and is protected by copyright, trademark, and other intellectual property laws.</p>
+    <p>The "Color Cascade" name and logo are trademarks of the Developer. Nothing in these Terms grants you any right to use our trademarks without prior written permission.</p>
+  </div>
+
+  <!-- Disclaimers -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:linear-gradient(135deg,#1E90FF,#A55EEA);">⚠️</div>
+      <h2>Disclaimers &amp; Limitation of Liability</h2>
+    </div>
+    <p>The App is provided <strong>"as is"</strong> without warranties of any kind, either express or implied. We do not warrant that the App will be uninterrupted, error-free, or free of viruses.</p>
+    <p>To the maximum extent permitted by law, we shall not be liable for:</p>
+    <ul>
+      <li>Loss of data, including game progress or virtual currency</li>
+      <li>Indirect, incidental, or consequential damages arising from App use</li>
+      <li>Issues caused by third-party services (AdMob, Apple, etc.)</li>
+      <li>Device damage resulting from App use</li>
+    </ul>
+  </div>
+
+  <!-- Termination -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:linear-gradient(135deg,#FF6B81,#CC1144);">🔚</div>
+      <h2>Termination</h2>
+    </div>
+    <p>We may terminate or suspend your access to the App at our sole discretion, without notice, for conduct that we believe violates these Terms or is harmful to other users, the App, or third parties.</p>
+    <p>Upon termination, all licences granted to you under these Terms will immediately cease.</p>
+  </div>
+
+  <!-- Governing Law -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:linear-gradient(135deg,#2ED573,#1E90FF);">⚖️</div>
+      <h2>Governing Law</h2>
+    </div>
+    <p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which the Developer is based, without regard to conflict of law principles.</p>
+    <p>Any disputes arising from these Terms or your use of the App shall be subject to the exclusive jurisdiction of the courts in that jurisdiction.</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact-card">
+    <h3>Questions About These Terms?</h3>
+    <p style="color:rgba(255,255,255,0.55);">Contact us and we'll be happy to clarify anything.</p>
+    <!-- REPLACE with your real email address -->
+    <a href="mailto:legal@yourcascadeapp.com" class="email-btn">✉️ legal@yourcascadeapp.com</a>
+  </div>
+
+</main>
+
+</body>
+</html>
